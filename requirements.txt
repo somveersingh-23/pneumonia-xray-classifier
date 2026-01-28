@@ -1,5 +1,9 @@
 tensorflow==2.20.0
+<<<<<<< HEAD
 numpy==1.24.3
+=======
+numpy==1.26.4
+>>>>>>> 5dd786d (changing versions)
 pandas==2.0.3
 matplotlib==3.7.2
 seaborn==0.12.2

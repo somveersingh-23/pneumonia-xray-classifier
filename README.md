@@ -117,6 +117,7 @@ The dataset shows significant class imbalance (2.9:1 ratio in training set). Thi
 - Resize to 224×224 pixels (ResNet50 input requirement)
 - Normalize pixel values to [0, 1] range
 - Convert to RGB format (3 channels)
+<img src="outputs/figures/figure2_sample_xrays.png">
 
 **Data Augmentation** (Training Set Only):
 - Random rotation (±15°)
@@ -176,46 +177,18 @@ Standard accuracy is **insufficient** for medical diagnosis. We prioritize:
 
 **Visualization:**
 - Confusion Matrix
+
+<img src="outputs/plots/confusion_matrix.png">
+
+
 - ROC Curve with AUC score
+
+<img src="outputs/plots/roc_curve.png">
+
 - Training/Validation accuracy & loss curves
 
+<img src="outputs/plots/training_history.png">
+
+<img src="outputs/figures/figure4_performance_summary.png">
+
 ---
-
-## 📁 Project Structure
-
-pneumonia-xray-classifier/
-│
-├── data/ # Dataset directory
-│ ├── train/
-│ │ ├── NORMAL/
-│ │ └── PNEUMONIA/
-│ ├── test/
-│ │ ├── NORMAL/
-│ │ └── PNEUMONIA/
-│ └── val/
-│ ├── NORMAL/
-│ └── PNEUMONIA/
-│
-├── src/ # Source code modules
-│ ├── init.py
-│ ├── data_loader.py # Data loading & augmentation
-│ ├── model.py # Model architecture
-│ ├── train.py # Training pipeline
-│ └── evaluate.py # Evaluation & visualization
-│
-├── notebooks/ # Jupyter notebooks
-│ └── exploration.ipynb # Data exploration & analysis
-│
-├── outputs/ # Training outputs
-│ ├── models/ # Saved model files
-│ │ ├── best_model.h5
-│ │ └── final_model.h5
-│ ├── plots/ # Visualization plots
-│ │ ├── training_history.png
-│ │ ├── confusion_matrix.png
-│ │ └── roc_curve.png
-│ └── results/ # Evaluation reports
-│
-├── main.py # Main execution script
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
