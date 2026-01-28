@@ -1,0 +1,16 @@
+{
+    "confusion_matrix": {
+        "tn": 117,
+        "fp": 117,
+        "fn": 5,
+        "tp": 385
+    },
+    "performance": {
+        "accuracy": 0.8044871794871795,
+        "sensitivity": 0.9871794871794872,
+        "specificity": 0.5,
+        "precision": 0.7669322709163346,
+        "f1_score": 0.8632286995515696,
+        "roc_auc": 0.9354700854700856
+    }
+}
