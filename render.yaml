@@ -1,11 +1,7 @@
 services:
   - type: web
-    name: pneumonia-detection-api
+    name: pneumonia-xray-classifier
     env: python
-    plan: free
+    pythonVersion: 3.10.13
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /health
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.9.18
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
